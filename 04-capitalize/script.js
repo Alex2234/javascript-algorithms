@@ -7,7 +7,10 @@
 */
 
 function capitalize(str) {
-    // Напишите код здесь
+    const arr=str.toLowerCase().split(' ').map(element => {
+    return element[0].toUpperCase()+element.slice(1)
+    });
+    return arr.join(' ');
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

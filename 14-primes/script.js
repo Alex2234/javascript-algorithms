@@ -5,10 +5,30 @@
  * Функция должна возвращать массив простых чисел от 2 до n.
  * 
 */
+function isPrime(n) {
+    let sum=0;
+    if(n <= 1) {
+    return false;
+    }
+    else for (let i=1; i<=n; i++) {
+        if (n%i===0) 
+        sum++;
+    }
+    if (sum > 2) 
+    return false;
+    else return true;
+}
 
 function primes(num) {
-    // Напишите код здесь
+    
+    const arr=[];
+    for (let n=2; n<=num; n++) 
+        if(isPrime(n)) 
+        arr.push(n)
+        return arr;
+    
 }
+
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 

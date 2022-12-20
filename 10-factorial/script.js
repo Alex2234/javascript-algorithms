@@ -8,7 +8,16 @@
 */
 
 function factorial(n) {
-    // Напишите код здесь
+    if (n===0 || n===1)
+        return 1;
+        let sum=1;
+    if (n>=1) {
+        for (let i=1; i<=n; i++) {
+            sum=i*sum;
+        }
+        return sum;
+    }
+    
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

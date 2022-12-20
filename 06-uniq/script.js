@@ -8,8 +8,17 @@
 */
 
 function uniq(arr) {
-    // Напишите код здесь
+    
+    const sortArr=arr.sort();
+    for (let i=0; i<=sortArr.length; i++) {
+        if (sortArr[i]===sortArr[i+1]||sortArr[i]===sortArr[i-1])
+            sortArr.splice(i,1);
+            
+    }
+    return sortArr;
 }
+    // Напишите код здесь
+
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 

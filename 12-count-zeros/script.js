@@ -7,7 +7,17 @@
 */
 
 function countZeros(n) {
-    // Напишите код здесь
+   let sum=0;
+   if (n === 0) 
+   return 0;
+   else for (let i=1; i<=n; i++) {
+    let arr=String(i).split("");
+     arr.forEach(element => {
+            if (element==0)
+            sum++;
+       });
+   }
+   return sum;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
