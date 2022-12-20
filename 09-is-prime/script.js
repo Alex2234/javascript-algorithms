@@ -4,23 +4,21 @@
  * Напишите функцию isPrime(n) для проверки, простое число n или нет.
  * Напомним, что число называют простым, если оно больше 1 и делится
  * без остатка только на 1 и на само себя.
- * 
+ *
  * На вход функция должна принимать число n и возвращать true,
  * если n простое, и false — если нет.
-*/
+ */
 
 function isPrime(n) {
-    let sum=0;
-    if(n <= 1) {
+  let sum = 0;
+  if (n <= 1) {
     return false;
+  } else
+    for (let i = 1; i <= n; i++) {
+      if (n % i === 0) sum++;
     }
-    else for (let i=1; i<=n; i++) {
-        if (n%i===0) 
-        sum++;
-    }
-    if (sum > 2) 
-    return false;
-    else return true;
+  if (sum > 2) return false;
+  else return true;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

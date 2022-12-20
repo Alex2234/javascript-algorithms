@@ -4,20 +4,19 @@
  * Напишите функцию countZeros(n), принимающую на вход натуральное число n.
  * Возвращать функция должна суммарное количество нулей, содержащихся во всех числах от 1 до n включительно.
  *
-*/
+ */
 
 function countZeros(n) {
-   let sum=0;
-   if (n === 0) 
-   return 0;
-   else for (let i=1; i<=n; i++) {
-    let arr=String(i).split("");
-     arr.forEach(element => {
-            if (element==0)
-            sum++;
-       });
-   }
-   return sum;
+  let sum = 0;
+  if (n === 0) return 0;
+  else
+    for (let i = 1; i <= n; i++) {
+      const arr = String(i).split("");
+      arr.forEach((element) => {
+        if (element == 0) sum++;
+      });
+    }
+  return sum;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
